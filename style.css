@@ -1,0 +1,516 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* General styles for the entire page */
+
+/* Resetting default margin, padding, and box-sizing for the whole page */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+/* Setting up global variables for the colors I'll be using throughout the page -for easier access- */
+
+:root{
+  --color-black1: #151515;
+  --color-black2: #000000;
+  --color-white: white;
+  --dark-blue: #27888b;
+  --light-blue: #6ACCCF;
+  --navy: #1f2937;
+  --border-hover: #ca8a04;
+  --header-background: #faf5ff;
+  --shadow-color: #c0c0c0;
+  --discription: #6b7280;
+  --box-shadow: 0 0 10px var(--shadow-color);
+  /* a smooth transition effect */
+  transition: .4s ease;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+
+h2,h3,h4,h5{
+  color: var(--color-black2);
+}
+
+h2{
+  font-size: 55px;
+}
+
+h3{
+  font-size: 32px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5{
+  font-size: 20px;
+}
+
+/* Adding padding to the top of each section to add some space between each part*/
+section{
+  padding-top: 120px;
+}
+
+.container{
+  width: 90%; /* setting width of the parent container of each section*/
+  margin: 0 auto; /* centering the container horizontally */
+  max-width: 1200px;
+}
+
+#Services, #Skills, #Projects{
+  margin: 0 20px; /* adding margin only to the left and right sides to leave some space from the sides */
+}
+
+/* Navigation Bar */
+nav{
+  width: 100%;
+  position: fixed;  /* to make the navigation bar fixed while scrolling */
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+}
+
+.nav_content{
+  max-width: 1500px;
+  margin: auto;
+  padding: 1.5rem 1rem; /* adding padding around the navigation content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* to make the items evenly distributed */
+}
+
+nav .logo a{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--light-blue);
+  transition: .3s;    
+}
+
+nav .logo a:hover{
+  color: var(--dark-blue); /* changing text color when hovered */
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+.nav-links li a{
+  padding: .5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--navy);
+  transition: 0.3s;
+}
+
+.nav-links li a:hover{
+  /* changing both the top and bottom color of the lists when hovered */
+  border-top-color: var(--border-hover);
+  border-bottom-color: var(--border-hover);
+  color: var(--border-hover);
+}
+
+/* Header */
+.header{
+  background-color: var(--header-background);
+  padding: 2rem 1rem;
+}
+
+.header_content{
+  min-height: 100vh;
+  max-width: 1200px;
+  padding: 1rem; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dividing the content into two columns with equal width */
+  gap: 4rem; /* adding gap between grid items */
+}
+
+.content{
+  display: flex;  
+  flex-direction: column; /* stacking the content vertically in columns */
+  justify-content: center;
+}
+
+.subtitle{
+  letter-spacing: 2px;
+  color: var(--discription);
+  font-weight: 600;
+}
+
+.title{
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.title span{
+  font-weight: 600;
+}
+
+.discription{
+    line-height: 1.5rem;
+    color: var(--discription);
+    margin-bottom: 2rem;
+}
+
+.action_btns{
+  display: flex;
+  gap: 1rem;
+}
+
+.action_btns a{
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  margin-top: 5%;
+  outline: none;
+  border: 2px solid var(--light-blue);
+  border-radius: 10px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.hire_me{
+  background-color: var(--light-blue);
+  color: var(--color-white);
+}
+
+.hire_me:hover{
+  background-color: var(--dark-blue); 
+}
+
+.portfolio{
+  color: var(--light-blue);
+}
+
+.portfolio:hover{
+  background-color: var(--dark-blue);
+  color: var(--color-white);
+}
+
+.image{
+  display: grid;
+  place-items: center; /* centering the image both horizontally and vertically */
+  margin-left: 50%;
+  margin-bottom: 10%;
+  max-width: 100%; 
+}
+
+
+/* About */
+  #About{
+  padding-top: 0; /* removing the top padding from the About section */
+  }
+  
+  .about-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 140px;
+    align-items: center;
+  }
+  
+  /* styling the right side of the About section */
+  .about-right p{
+    font-size: 19px;
+    margin-bottom: 1rem;
+  }
+  
+  .about-right h2{
+    margin-bottom: 10px;
+  }
+
+  /* styling the left side of the About section */
+  .about-left img{
+    margin-top: -210px; 
+  }
+
+/* Services */
+article p{
+  font-size: 19px;
+}
+
+.myservices{
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr); /* dividing the content into three columns with equal width */
+  gap: 30px;
+}
+
+.myservices article{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 0 10px var(--shadow-color);
+  padding: 40px 20px;
+  border-radius: 10px;   /* giving the boxes some curves */
+}
+
+.myservices article:hover{
+  box-shadow: none; /* removing the shadow effect when hovered */
+} 
+
+.myservices article img{
+  max-width: 200px;
+  margin: auto;
+}
+
+/* Skills */
+.myskills{
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;  
+}
+
+.myskills article{
+  box-shadow: 0 0 10px var(--shadow-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myskills article:hover{
+  box-shadow: none;
+}
+
+.myskills article img{
+  max-width: 180px;
+}
+
+/* My Projects */
+.myprojects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 90px;
+}
+
+.myprojects article {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.myprojects img {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  transition: transform .3s, opacity .3s;
+}
+
+.myprojects img:hover {
+  transform: scale(1.05); /* increasing the scale to pop out a little bit when hovered */
+  opacity: .8;
+  box-shadow: none;
+}
+
+.myprojects h4 {
+  margin-top: 10px;
+  padding: 0 10px;
+}
+  
+  /* Contact */
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .contact-container .social{
+    display: flex;
+    gap: 20px;
+  }
+  
+  .contact-container .social a{
+    font-size: 20px;
+    transition: var(--transition);
+    color: var(--color-black1);
+    cursor: pointer;
+  }
+  
+  .contact-container .social a:hover{
+    opacity: .8;
+  }
+
+  .contact-container .btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 40px;
+    background: var(--color-black1);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition);  
+  }
+
+  .contact-container .btn:hover{
+    opacity: .8;
+  }
+
+/* RESPONSIVENESS */
+/* Default Styles are for Desktop and Laptops */
+
+/* For iPads and Tablets (Portrait and Landscape) */
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+
+  /* body */
+  h1{
+    font-size: 50px;
+    }
+    
+    h2{
+      font-size: 40px;
+      }
+    
+    h3{
+      font-size: 30px;
+      }
+    
+    h4{
+      font-size: 25px;
+       } 
+    
+    h5{
+      font-size: 20px;
+      }  
+      
+  
+    /* Navigation bar */
+    .navlinks{
+      display: none;  
+    }
+    
+    .logo{
+      margin: auto;
+    }
+    
+    /* header */
+    header{
+      height: 70vh;
+      padding-top: 200px;
+    }
+    
+    .header_content {
+      grid-template-columns: repeat(2,1fr); /* dividing the content into 2 columns with equal width */
+      gap: 2rem;
+    }
+
+    /* About */
+    .about-container{
+      gap: 100px;
+    }
+    
+
+   /* Projects */
+  .myprojects img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For Mobile Devices (Portrait) */
+@media only screen and (max-width: 768px) {
+
+  /* body */
+  h1{
+    font-size: 46px;
+    }
+    
+    h2{
+    font-size: 38px;
+    }
+    
+    p{
+    font-size: 18px;
+    }
+    
+    body{
+    font-size: 18px;
+    } 
+    
+    .container {
+      width: 90%; 
+    }
+
+    /* Navigation bar */
+    nav{
+      height: 4.5rem;
+      backdrop-filter: blur(15px);   /* blurring the navigation bar when the screen is smaller with only the main logo in it */
+    }
+    
+    .nav_content {
+      padding: 1rem;
+    }
+  
+    /* hiding navigation links when the screen gets smaller */
+    .nav-links {
+      display: none;
+    }
+  
+    .nav-links li {
+      margin-bottom: 1rem;
+    }
+
+    
+    /* header */
+    header{
+      padding-top: 120px;
+    }
+    
+    .header_content{
+      grid-template-columns: repeat(2,1fr); /* dividing the content into 2 columns with equal width */
+      gap: 30px;
+    }
+    
+    /* About */
+    .about-container{
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .about-left{
+      width: 50%;
+      margin: auto;
+    }
+    
+    /* Services, Skills & Projects */
+    .myservices, .myskills, .myprojects{
+      grid-template-columns: repeat(2, 1fr); 
+      margin-top: 40px;
+    }
+}
+
+/* For Mobile Devices (Landscape) */
+@media only screen and (max-width: 480px) {
+  .header_content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .myprojects {
+    grid-template-columns: 1fr; /* content in a single column*/
+  }
+}
+
